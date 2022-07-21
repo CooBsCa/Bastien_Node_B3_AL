@@ -2,7 +2,8 @@ import express from "express";
 import bodyparser from "body-parser";
 import mongoose from "mongoose";
 import feedRoutes from "./routes/feed.js";
-import multer from "multer";
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const app = express();
@@ -21,7 +22,7 @@ app.use('/feed', feedRoutes);
 
 mongoose
   .connect(
-    'mongodb+srv://bc:azh@cluster0.ojau0.mongodb.net/test'
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ojau0.mongodb.net/test`
   )
   .then(result => {
     app.listen(8080);
