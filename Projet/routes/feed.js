@@ -16,5 +16,11 @@ router.get(
     feedController.getCity
 );
 
+// GET /feed/upload
+router.post(
+    '/upload',
+    feedController.imageUpload
+);
+
 
 export default router;

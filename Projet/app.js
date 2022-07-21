@@ -2,9 +2,10 @@ import express from "express";
 import bodyparser from "body-parser";
 import mongoose from "mongoose";
 import feedRoutes from "./routes/feed.js";
+import multer from "multer";
+
 
 const app = express();
-
 
 // app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
 app.use(bodyparser.json()); // application/json
