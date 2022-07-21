@@ -1,7 +1,5 @@
-const express = require('express');
-const { body } = require('express-validator/check');
-
-const feedController = require('../controllers/feed');
+import express from "express";
+import feedController from "../controllers/feed.js";
 
 const router = express.Router();
 
@@ -9,13 +7,14 @@ const router = express.Router();
 // POST /feed/post
 router.post(
     '/post',
-    feedController.createPost
+    feedController.createCity
 );
 
 // GET /feed/post
 router.get(
-    '/posts',
-    feedController.getPosts
+    '/get',
+    feedController.getCity
 );
 
-module.exports = router;
+
+export default router;

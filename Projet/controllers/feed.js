@@ -1,6 +1,6 @@
-const Post = require('../models/post');
+import Post from '../models/post.js';
 
-exports.getPosts = (req, res, next) => {
+const getCity = (req, res, next) => {
     res.status(200).json({
       posts: [
         {
@@ -12,7 +12,7 @@ exports.getPosts = (req, res, next) => {
     });
   };
   
-  exports.createPost = (req, res, next) => {
+const createCity = (req, res, next) => {
     console.log('here');
     console.log('body', req.body);
     // const errors = validationResult(req);
@@ -42,4 +42,5 @@ exports.getPosts = (req, res, next) => {
         console.log(err);
       });
   };
-  
+
+  export default { getCity, createCity };

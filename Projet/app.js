@@ -1,11 +1,9 @@
-const express = require('express');
-const bodyparser = require('body-parser');
-const mongoose = require('mongoose');
-
-const feedRoutes = require('./routes/feed');
+import express from "express";
+import bodyparser from "body-parser";
+import mongoose from "mongoose";
+import feedRoutes from "./routes/feed.js";
 
 const app = express();
-
 
 
 // app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
