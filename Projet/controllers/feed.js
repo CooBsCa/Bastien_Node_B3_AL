@@ -1,21 +1,16 @@
 const Post = require('../models/post');
 
-// exports.getPosts = (req, res, next) => {
-//     res.status(200).json({
-//       posts: [
-//         {
-//           _id: '1',
-//           title: 'First Post',
-//           content: 'This is the first post!',
-//           imageUrl: 'images/yourimage.jpg',
-//           creator: {
-//             name: 'Sciences-u'
-//           },
-//           createdAt: new Date()
-//         }
-//       ]
-//     });
-//   };
+exports.getPosts = (req, res, next) => {
+    res.status(200).json({
+      posts: [
+        {
+            "cityName": "Montréal",
+            "countryName": "Canada",
+            "population": 90000000
+        }
+      ]
+    });
+  };
   
   exports.createPost = (req, res, next) => {
     console.log('here');
